@@ -1,29 +1,47 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Nav = () => {
 
-    const [state, setstate] = useState("navbar-transparent");
-
-
+    const [navBackground, setNavBackground] = useState('navbar-transparent')
+    const navRef = React.useRef()
+    navRef.current = navBackground
     useEffect(() => {
-        const changeClass = () => {
-            const scrollValue = document.documentElement.scrollTop;
-            if (scrollValue > 20) {
-                setstate("navbar-dark");
+        const handleScroll = () => {
+            const show = window.scrollY > 310
+            if (show) {
+                setNavBackground('navbar-dark')
+            } else {
+                setNavBackground('navbar-transparent')
             }
-            else {
-                setstate("navbar-transparent");
-            }
-
         }
-        window.addEventListener('scroll', changeClass);
+        document.addEventListener('scroll', handleScroll)
+        return () => {
+            document.removeEventListener('scroll', handleScroll)
+        }
     }, [])
+
+    // const [state, setstate] = useState("navbar-transparent");
+
+
+    // useEffect(() => {
+    //     const changeClass = () => {
+    //         const scrollValue = document.documentElement.scrollTop;
+    //         if (scrollValue > 20) {
+    //             setstate("navbar-dark");
+    //         }
+    //         else {
+    //             setstate("navbar-transparent");
+    //         }
+
+    //     }
+    //     window.addEventListener('scroll', changeClass);
+    // }, [])
 
 
     return (
         <nav
-            className="navbar navbar-custom navbar-fixed-top bg-dark" onScroll={state}
+            className={"navbar navbar-custom navbar-fixed-top bg-dark `$[navRef.current]`"} 
         // role="navigation"
         >
             <div className="container">

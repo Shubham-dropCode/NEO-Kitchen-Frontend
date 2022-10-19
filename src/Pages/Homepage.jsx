@@ -1,17 +1,19 @@
 import React from 'react'
 import Nav from '../Components/Nav'
 import ProductCategorie from "../Components/Product/ProductCatagorie"
+import Product from "../Components/Product/Product"
 import HeroNewSlider from '../Components/HeroNewSlider'
 import HeroSlider from '../Components/HeroSlider'
 import CreateEmotion from "../Components/CreateEmotion"
 import HomeVideo from "../Components/HomeVideo"
 import OurTeam from "../Components/OurTeam/OurTeam"
 import Footer from "../Components/Footer"
+import Navbar from '../Components/Navbar/Navbar'
 const Homepage = () => {
     return (
         <>
 
-
+        {/* <Navbar/> */}
             <Nav />
             {/* <HeroNewSlider /> */}
             <HeroSlider />
@@ -21,6 +23,7 @@ const Homepage = () => {
                 <ProductCategorie />
                 {/* <AboutUs /> */}
                 <HomeVideo />
+                <Product/>
                 <OurTeam />
             </div>
             <Footer />
