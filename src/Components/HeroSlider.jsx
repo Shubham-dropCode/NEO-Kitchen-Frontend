@@ -1,5 +1,5 @@
 import React from 'react'
-import bg from "../assets/images/Neo3D/neopro.jpg"
+import bg from "../assets/images/Neo3D/newhello.jpg"
 
 const HeroSlider = () => {
     const styling = {
@@ -8,10 +8,11 @@ const HeroSlider = () => {
         backgroundAttachment: "fixed",
         backgroundPosition: "center",
         width: "100%",
-        height: "100%"
+        maxWidth: '250',
+        height: "100vh"
     }
     const heroSecton = {
-        height: '100vh'
+        height: 'auto'
     }
     // const img = require("/assets/images/Neo3D/Neobackground.jpg")
     return (
