@@ -1,6 +1,9 @@
 import React from 'react'
 
 const AboutUs = () => {
+    const styling = {
+        backgroundImage: `url("https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW9kdWxhciUyMGtpdGNoZW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60")`
+    } 
     return (
         <section className="module pt-4 " id="about">
             <div className='container'>
@@ -8,8 +11,10 @@ const AboutUs = () => {
                 <div className="row position-relative m-0">
                     <div
                         className="col-xs-12 col-md-6 side-image"
-                        data-background="https://images.pexels.com/photos/3926542/pexels-photo-3926542.jpeg?cs=srgb&dl=pexels-houzlook-com-3926542.jpg&fm=jpg"
+                        // data-background="https://images.pexels.com/photos/3926542/pexels-photo-3926542.jpeg?cs=srgb&dl=pexels-houzlook-com-3926542.jpg&fm=jpg"
+                        style={styling}
                     />
+
                     <div className="col-xs-12 col-md-6 col-md-offset-6 side-image-text">
                         <div className="row">
                             <div className="col-sm-12">
