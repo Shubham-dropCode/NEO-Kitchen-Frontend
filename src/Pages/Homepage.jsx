@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Nav from '../Components/Nav'
 import ProductCategorie from "../Components/Product/ProductCatagorie"
 import Product from "../Components/Product/Product"
@@ -10,6 +10,9 @@ import OurTeam from "../Components/OurTeam/OurTeam"
 import Footer from "../Components/Footer"
 import Navbar from '../Components/Navbar/Navbar'
 const Homepage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return (
         <>
 

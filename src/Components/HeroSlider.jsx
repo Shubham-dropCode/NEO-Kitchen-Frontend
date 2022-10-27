@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import bg from "../assets/images/Neo3D/newhello.jpg"
 
 const HeroSlider = () => {
@@ -30,9 +31,9 @@ const HeroSlider = () => {
                                 Hello &amp; welcome
                             </div>
                             <div className="font-alt mb-40 titan-title-size-4">Design Your World</div>
-                            <a className="section-scroll btn btn-border-w btn-round" href="#about">
-                                Learn More
-                            </a>
+                            <Link to="/About" className="section-scroll btn btn-border-w btn-round">
+                                About Us
+                            </Link>
                         </div>
                     </div>
                 </div>

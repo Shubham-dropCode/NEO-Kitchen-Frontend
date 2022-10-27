@@ -9,6 +9,7 @@ import NeoSink from "./Pages/NeoSink.jsx";
 import ContactUs from "./Pages/ContactUs";
 import Visualiser from "./Pages/Visualiser";
 import ProductDetails from "./Pages/ProductDetails"
+import { useEffect } from "react";
 function App() {
   return (
     <BrowserRouter>

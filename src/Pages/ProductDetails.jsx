@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BreadCrumb from "../Components/BreadCrumb";
 import Footer from "../Components/Footer";
 import Nav from "../Components/Nav";
 
 const ProductDetails = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
       <Nav />
@@ -51,16 +54,16 @@ const ProductDetails = () => {
           </div>
           <div className="mt-70">
             <div className="col-sm-4 text-center">
-              <h4>Finishes</h4>
+              <h3>Thickness</h3>
+              <p>15 MM</p>
+            </div>
+            <div className="col-sm-4 text-center">
+              <h3>Finishes</h3>
               <p>Gloss & Matt Finish</p>
             </div>
             <div className="col-sm-4 text-center">
-              <h4>Finishes</h4>
-              <p>Gloss & Matt Finish</p>
-            </div>
-            <div className="col-sm-4 text-center">
-              <h4>Finishes</h4>
-              <p>Gloss & Matt Finish</p>
+              <h3>Sizes (CM)</h3>
+              <p>800 x3000 MM 800 x3200 MM</p>
             </div>
           </div>
         </div>
