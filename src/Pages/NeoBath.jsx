@@ -8,7 +8,7 @@ const NeoBath = () => {
         <>
             <Nav />
             <BreadCrumb heading="Neo Bath" />
-            <Product />
+            <Product LinkTo="/ProductDetails"/>
             <Footer />
         </>
     )

@@ -23,7 +23,7 @@ const Homepage = () => {
                 <ProductCategorie />
                 {/* <AboutUs /> */}
                 <HomeVideo />
-                <Product/>
+                <Product LinkTo="/ProductDetails"/>
                 <OurTeam />
             </div>
             <Footer />

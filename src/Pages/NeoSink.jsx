@@ -9,7 +9,7 @@ const NeoSink = () => {
         <>
             <Nav />
             <BreadCrumb heading="Neo Sink" />
-            <Product />
+            <Product LinkTo="/ProductDetails"/>
             <Footer />
         </>
     )

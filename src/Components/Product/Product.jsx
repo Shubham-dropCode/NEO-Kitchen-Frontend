@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Products.css";
 
-const Product = () => {
+const Product = ({LinkTo}) => {
   return (
     <section className="module" id="alt-features">
       <div className="container py-5">
@@ -17,7 +17,7 @@ const Product = () => {
               </div>
 
               <div className="col-lg-3 mb-3 mb-lg-0 h-100">
-                <Link to="/NeoPro">
+                <Link to={LinkTo}>
                   <div className="hover hover-2 text-white rounded">
                     <img
                       src="https://i.pinimg.com/564x/f4/c2/19/f4c2191e397e8b9a69768f8517c0d5ca.jpg"
@@ -40,7 +40,7 @@ const Product = () => {
               </div>
 
               <div className="col-lg-3" style={{ paddingTop: "30px" }}>
-                <Link to="/NeoSink">
+                <Link to={LinkTo}>
                   <div className="hover hover-2 rounded">
                     <img
                       src="https://i.pinimg.com/564x/5e/3c/e8/5e3ce850846275ededc6e32ad1cb8293.jpg"
@@ -61,7 +61,7 @@ const Product = () => {
               </div>
 
               <div className="col-lg-3">
-                <Link to="/NeoBath">
+                <Link to={LinkTo}>
                   <div className="hover hover-2 text-white rounded">
                     <img
                       src="https://i.pinimg.com/564x/99/71/4b/99714b98136c353f79f3cb367d231220.jpg"
@@ -82,7 +82,7 @@ const Product = () => {
               </div>
 
               <div className="col-lg-3 " style={{ paddingTop: "30px" }}>
-                <Link to="/NeoCabinate">
+                <Link to={LinkTo}>
                   <div className="hover hover-2 text-white rounded">
                     <img
                       src="https://i.pinimg.com/564x/e2/e3/5b/e2e35b6e32e2dbb5b730a092be3fd02a.jpg"

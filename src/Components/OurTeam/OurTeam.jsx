@@ -2,7 +2,7 @@ import React from 'react'
 
 const OurTeam = () => {
     return (
-        <section className="module" id="team">
+        <section className="module pt-0" id="team">
             <div className="container">
                 <div className="row">
                     <div className="col-sm-6 col-sm-offset-3">

@@ -8,7 +8,7 @@ const Category = () => {
         <>
             <Nav />
             <BreadCrumb heading="Products" />
-            <Product />
+            <Product LinkTo="/ProductDetails" />
             <Footer />
         </>
     )

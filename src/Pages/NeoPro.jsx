@@ -9,7 +9,7 @@ const NeoPro = () => {
         <>
             <Nav />
             <BreadCrumb heading="Neo Pro" />
-            <Product />
+            <Product LinkTo="/ProductDetails"/>
             <Footer />
         </>
     )
