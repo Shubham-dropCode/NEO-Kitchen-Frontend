@@ -27,10 +27,10 @@ const HeroSlider = () => {
 
                     <div className="titan-caption">
                         <div className="caption-content">
-                            <div className="font-alt mb-30 titan-title-size-1">
-                                Hello &amp; welcome
+                            <div className="container font-alt mb-30 titan-title-size-1">
+                               Design Your World
                             </div>
-                            <div className="font-alt mb-40 titan-title-size-4">Design Your World</div>
+                            <div className="font-alt mb-40 titan-title-size-4">Premier kitchen appliances.</div>
                             <Link to="/About" className="section-scroll btn btn-border-w btn-round">
                                 About Us
                             </Link>

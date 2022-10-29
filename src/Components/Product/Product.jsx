@@ -7,7 +7,7 @@ const Product = ({LinkTo}) => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <section className="module" id="alt-features">
+    <section className="module" id="alt-features" style={{backgroundColor:"#EFF3F5 "}}>
       <div className="container py-5">
         <div className="py-5">
           <div className="row">

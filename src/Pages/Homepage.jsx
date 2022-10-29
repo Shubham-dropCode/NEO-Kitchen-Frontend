@@ -25,7 +25,7 @@ const Homepage = () => {
                 <CreateEmotion />
                 <ProductCategorie />
                 {/* <AboutUs /> */}
-                <HomeVideo />
+                {/* <HomeVideo /> */}
                 <Product LinkTo="/ProductDetails"/>
                 <OurTeam />
             </div>

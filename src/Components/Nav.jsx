@@ -5,17 +5,10 @@ import 'jquery-ui-dist/jquery-ui'
 
 const Nav = () => {
 
-    const [navBackground, setNavBackground] = useState('navbar-dark')
+    // const [navBackground, setNavBackground] = useState('navbar-dark')
     // const navRef = React.useRef()
     // navRef.current = navBackground
-    useEffect(() => {
-       
-                    /* ---------------------------------------------- /*
-                     * Transparent navbar animation
-                     /* ---------------------------------------------- */
-            
-                    
-    }, [])
+   
 
     // const [state, setstate] = useState("navbar-transparent");
 
@@ -134,7 +127,7 @@ const Nav = () => {
 
     return (
         <nav
-            className={"navbar navbar-custom navbar-fixed-top bg-dark `$(navBackground)`"} 
+            className={"navbar navbar-custom navbar-fixed-top bg-light navbar-light"} 
         // role="navigation"
         >
             <div className="container">
@@ -151,7 +144,7 @@ const Nav = () => {
                         <span className="icon-bar" />
                     </button>
                     <Link to="/" className="navbar-brand" >
-                        NEO KITCHENS
+                        <img src='./../assets/images/Neo3D/logo.png' />
                     </Link>
                 </div>
                 <div className="collapse navbar-collapse" id="custom-collapse">
@@ -168,9 +161,9 @@ const Nav = () => {
                             <ul className="dropdown-menu">
                                 <li className="dropdown">
                                     <Link to="/NeoPro" className="dropdown-toggle" data-toggle="dropdown">
-                                        Neo Pro
+                                        Kitchen Faucets
                                     </Link>
-                                    <ul className="dropdown-menu">
+                                    {/* <ul className="dropdown-menu">
                                         <li>
                                             <a href="index_mp_fullscreen_static.html">Tiles</a>
                                         </li>
@@ -187,16 +180,21 @@ const Nav = () => {
                                             <a href="index_mp_classic_static.html">Wall Panel</a>
                                         </li>
 
-                                    </ul>
+                                    </ul> */}
                                 </li>
                                 <li >
                                     <Link to="/NeoSink">
-                                        Neo Sink
+                                        Kitchen Sink
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="/NeoBath">
-                                        Neo Bath
+                                        Kitchen Cabinets
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/NeoBath">
+                                        Kitchen Accessories
                                     </Link>
                                 </li>
                             </ul>

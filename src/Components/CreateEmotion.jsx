@@ -5,7 +5,7 @@ const CreateEmotion = () => {
         fontSize: '6.5rem',
     }
     return (
-        <section className="module pb-0">
+        <section className="module pb-1" style={{backgroundColor: "#EFF3F5"}}>
             <div className="container p-0">
                 <div className="row">
                     <div className="col-sm-6">
@@ -19,7 +19,7 @@ const CreateEmotion = () => {
                         </p>
                         <h5 className="">
                             <u>
-                                <a href="">view projects</a>
+                            <button class="btn btn-border-d btn-round" type="submit">View Projects</button>
                             </u>
                         </h5>
                     </div>
