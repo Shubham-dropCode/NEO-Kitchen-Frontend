@@ -3,24 +3,106 @@ import BreadCrumb from "../Components/BreadCrumb";
 import Footer from "../Components/Footer";
 import Nav from "../Components/Nav";
 
+import $ from "jquery";
+import Slider from "slick-carousel";
+import "jquery-ui-dist/jquery-ui";
+import ProductSlider from "../Components/Product/ProductSlider";
+
 const ProductDetails = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
+
+  // useEffect(() => {
+  //   var module = $('.home-section, .module, .module-small, .side-image');
+  //       module.each(function(i) {
+  //           if ($(this).attr('data-background')) {
+  //               $(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');
+  //           }
+  //       });
+  // }, [])
+
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <BreadCrumb heading="ProductDetails" />
       <section className="module">
         <div className="container">
+          <h1>Heading</h1>
           <div className="row">
-            <div className="col-sm-6 mb-sm-40">
-              <a className="gallery" href="assets/images/shop/product-7.jpg">
-                <img
-                  src="https://images.unsplash.com/photo-1582683522098-72ad7b0883a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-                  alt="Single Product Image"
-                />
-              </a>
+            <div className="col-sm-8 mb-sm-40">
+              <ProductSlider/>
+              {/* <div className="hero-slider" style={{ height: "50vh" }}>
+                <ul className="slides" style={{ height: "50vh" }}>
+                  <li
+                    className="bg-dark-30 bg-dark"
+                    style={{
+                      backgroundImage: `url('${bg1}')`,
+                    }}
+                  >
+                    <div className="titan-caption">
+                      <div className="caption-content">
+                        <div className="font-alt mb-30 titan-title-size-1">
+                          Hello &amp; welcome
+                        </div>
+                        <div className="font-alt mb-40 titan-title-size-4">
+                          We are Titan
+                        </div>
+                        <a
+                          className="section-scroll btn btn-border-w btn-round"
+                          href="#about"
+                        >
+                          Learn More
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li
+                    className="bg-dark-30 bg-dark"
+                    style={{
+                      backgroundImage: `url('${bg2}')`,
+                    }}
+                  >
+                    <div className="titan-caption">
+                      <div className="caption-content">
+                        <div className="font-alt mb-30 titan-title-size-2">
+                          Titan is creative multipurpose html template for
+                          <br />
+                          web developers who change the world
+                        </div>
+                        <a className="btn btn-border-w btn-round" href="about">
+                          Learn More
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="bg-dark-30 bg-dark"
+                    style={{
+                      backgroundImage: `url('${bg3}')`,
+                    }}
+                  >
+                    <div className="titan-caption">
+                      <div className="caption-content">
+                        <div className="font-alt mb-30 titan-title-size-1">
+                          We build brands that build business
+                        </div>
+                        <div className="font-alt mb-40 titan-title-size-3">
+                          We are Amazing
+                        </div>
+                        <a
+                          className="section-scroll btn btn-border-w btn-round"
+                          href="#about"
+                        >
+                          Learn More
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div> */}
+
               {/* <ul className="product-gallery">
             <li>
               <a className="gallery" href="assets/images/shop/product-8.jpg" />
@@ -44,30 +126,38 @@ const ProductDetails = () => {
               />
             </li>
           </ul> */}
-            </div>
-            <div className="col-sm-6">
-              <img
-                src="https://images.unsplash.com/photo-1552332271-bf8afb3d4596?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-                alt="Single Product Image"
-              />
-            </div>
-          </div>
-          <div className="mt-70">
-            <div className="col-sm-4 text-center">
-              <h3>Thickness</h3>
-              <p>15 MM</p>
-            </div>
-            <div className="col-sm-4 text-center">
-              <h3>Finishes</h3>
-              <p>Gloss & Matt Finish</p>
-            </div>
-            <div className="col-sm-4 text-center">
-              <h3>Sizes (CM)</h3>
-              <p>800 x3000 MM 800 x3200 MM</p>
+         </div>
+            <div className="col-sm-4">
+              <div
+                className=""
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <div className="col-sm-4 text-center">
+                  <h3>Thickness</h3>
+                  <p>15 MM</p>
+                </div>
+                <div className="col-sm-4 text-center">
+                  <h3>Finishes</h3>
+                  <p>Gloss & Matt Finish</p>
+                </div>
+                <div className="col-sm-4 text-center">
+                  <h3>Sizes (CM)</h3>
+                  <p>800 x3000 MM 800 x3200 MM</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <div className="container">
+        <button className="btn btn-border-d btn-round btn-block mt-4">
+          Inquery Now
+        </button>
+      </div>
       {/* <hr className="divider-w" /> */}
       <section className="module-small">
         <div className="container">
@@ -140,7 +230,7 @@ const ProductDetails = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

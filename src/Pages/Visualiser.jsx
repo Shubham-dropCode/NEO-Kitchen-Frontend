@@ -10,10 +10,10 @@ const Visualiser = () => {
   }, [])
     return (
         <>
-            <Nav />
+            {/* <Nav /> */}
             <BreadCrumb heading="Visualiser" />
             <AboutUs />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

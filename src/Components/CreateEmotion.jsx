@@ -19,7 +19,7 @@ const CreateEmotion = () => {
                         </p>
                         <h5 className="">
                             <u>
-                            <button class="btn btn-border-d btn-round" type="submit">View Projects</button>
+                            <button className="btn btn-border-d btn-round" type="submit">View Projects</button>
                             </u>
                         </h5>
                     </div>

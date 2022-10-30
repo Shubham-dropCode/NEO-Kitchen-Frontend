@@ -160,7 +160,7 @@ const Nav = () => {
                             </Link>
                             <ul className="dropdown-menu">
                                 <li className="dropdown">
-                                    <Link to="/NeoPro" className="dropdown-toggle" data-toggle="dropdown">
+                                    <Link to="/Fauctes" className="dropdown-toggle" data-toggle="dropdown">
                                         Kitchen Faucets
                                     </Link>
                                     {/* <ul className="dropdown-menu">
@@ -183,17 +183,17 @@ const Nav = () => {
                                     </ul> */}
                                 </li>
                                 <li >
-                                    <Link to="/NeoSink">
+                                    <Link to="/Sink">
                                         Kitchen Sink
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/NeoBath">
+                                    <Link to="/Cabinate">
                                         Kitchen Cabinets
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/NeoBath">
+                                    <Link to="/Accessories">
                                         Kitchen Accessories
                                     </Link>
                                 </li>

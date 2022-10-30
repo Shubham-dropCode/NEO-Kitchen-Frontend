@@ -4,18 +4,18 @@ import Nav from '../Components/Nav'
 import BreadCrumb from "../Components/BreadCrumb"
 import Product from '../Components/Product/Product'
 
-const NeoSink = () => {
+const NeoPro = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
     return (
         <>
-            <Nav />
-            <BreadCrumb heading="Neo Sink" />
+            {/* <Nav /> */}
+            <BreadCrumb heading="Kitchen Fauctes" />
             <Product LinkTo="/ProductDetails"/>
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }
 
-export default NeoSink
+export default NeoPro

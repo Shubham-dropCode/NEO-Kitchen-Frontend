@@ -9,6 +9,7 @@ import HomeVideo from "../Components/HomeVideo"
 import OurTeam from "../Components/OurTeam/OurTeam"
 import Footer from "../Components/Footer"
 import Navbar from '../Components/Navbar/Navbar'
+import ProductListing from '../Components/Product/ProductListing'
 const Homepage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -17,7 +18,7 @@ const Homepage = () => {
         <>
 
         {/* <Navbar/> */}
-            <Nav />
+            {/* <Nav /> */}
             {/* <HeroNewSlider /> */}
             <HeroSlider />
 
@@ -27,9 +28,10 @@ const Homepage = () => {
                 {/* <AboutUs /> */}
                 {/* <HomeVideo /> */}
                 <Product LinkTo="/ProductDetails"/>
-                <OurTeam />
+                {/* <OurTeam /> */}
+                <ProductListing/>
             </div>
-            <Footer />
+            {/* <Footer /> */}
 
 
         </>

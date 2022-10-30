@@ -1088,7 +1088,7 @@ Hero Slider
 }
 
 .hero-slider .slides {
-  height: 100% !important;
+  /* height: 100% !important; */
   transition-delay: 1s;
 }
 

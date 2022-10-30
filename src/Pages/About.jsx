@@ -9,10 +9,10 @@ const About = () => {
       }, [])
     return (
         <>
-            <Nav />
+            {/* <Nav /> */}
             <BreadCrumb heading="About Us" />
             <AboutUs />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

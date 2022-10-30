@@ -31,7 +31,7 @@ const ProductCatagorie = () => {
             </p>
             <h5 className="">
               <u>
-                <button class="btn btn-border-d btn-round" type="submit">
+                <button className="btn btn-border-d btn-round" type="submit">
                   View Projects
                 </button>
               </u>
@@ -64,7 +64,7 @@ const ProductCatagorie = () => {
               </p>
               <h5 className=" text-white">
                 <u>
-                  <button class="btn btn-border-d btn-round" type="submit">
+                  <button className="btn btn-border-d btn-round" type="submit">
                     View Projects
                   </button>
                 </u>
@@ -104,7 +104,7 @@ const ProductCatagorie = () => {
             </p>
             <h5 className="">
               <u>
-                <button class="btn btn-border-d btn-round" type="submit">
+                <button className="btn btn-border-d btn-round" type="submit">
                   View Projects
                 </button>
               </u>

@@ -9,10 +9,10 @@ const NeoBath = () => {
       }, [])
     return (
         <>
-            <Nav />
-            <BreadCrumb heading="Neo Bath" />
+            {/* <Nav /> */}
+            <BreadCrumb heading="Kitchen Cabinate" />
             <Product LinkTo="/ProductDetails"/>
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }
