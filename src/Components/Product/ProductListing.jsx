@@ -7,36 +7,43 @@ import Nav from "../Nav";
 import BreadCrumb from "../BreadCrumb";
 import Footer from "../Footer";
 // import "./ProductListing.css";
+import axios from "axios";
 
 const ProductListing = () => {
+  
+  axios.get("http://localhost:1337/api/categories").then((response) => {
+    let data = response.data.data
+    console.log(data[0]);
+  });
+
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-  };
+    window.scrollTo(0, 0);
+  }, []);
+  // const settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  // };
 
   return (
     <>
-    <section className="module sliding-portfolio">
-      <div className="row">
-        <div className="col-sm-6 col-sm-offset-3">
-          <h2 className="module-title font-alt">Products</h2>
-          <div className="module-subtitle font-serif">
-            What we do Produce <br />
-            To Make Your Home More Smiling
+      <section className="module sliding-portfolio">
+        <div className="row">
+          <div className="col-sm-6 col-sm-offset-3">
+            <h2 className="module-title font-alt">Products</h2>
+            <div className="module-subtitle font-serif">
+              What we do Produce <br />
+              To Make Your Home More Smiling
+            </div>
           </div>
         </div>
-      </div>
-      <div className="container">
-        <div className="row">
-          <div>
-            <Slider {...settings}>
-              <div className="owl-item">
+        <div className="container">
+          <div className="row">
+            <div>
+              {/* <Slider {...settings}> */}
+              <div className="owl-item" style={{ width: "300px" }}>
                 <div className="col-sm-12">
                   <div className="work-item">
                     <Link to="/Fauctes">
@@ -55,7 +62,7 @@ const ProductListing = () => {
                 </div>
               </div>
 
-              <div className="owl-item">
+              {/* <div className="owl-item">
                 <div className="col-sm-12">
                   <div className="work-item">
                     <Link to="/Sink">
@@ -108,21 +115,20 @@ const ProductListing = () => {
                     </Link>
                   </div>
                 </div>
+              </div> */}
+              {/* </Slider> */}
+            </div>
+            <div className="col-sm-12">
+              <div className="text-center">
+                <a className="btn btn-border-d btn-circle mt-50" href="#">
+                  View All Cases
+                </a>
               </div>
-            </Slider>
-          </div>
-          <div className="col-sm-12">
-            <div className="text-center">
-              <a className="btn btn-border-d btn-circle mt-50" href="#">
-                View All Cases
-              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
- 
-  </>
+      </section>
+    </>
   );
 };
 

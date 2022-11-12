@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import BreadCrumb from "../Components/BreadCrumb";
-import Footer from "../Components/Footer";
-import Nav from "../Components/Nav";
+// import Footer from "../Components/Footer";
+// import Nav from "../Components/Nav";
 
-import $ from "jquery";
-import Slider from "slick-carousel";
+// import $ from "jquery";
+// import Slider from "slick-carousel";
 import "jquery-ui-dist/jquery-ui";
 import ProductSlider from "../Components/Product/ProductSlider";
 
