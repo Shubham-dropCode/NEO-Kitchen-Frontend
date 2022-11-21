@@ -5,32 +5,16 @@ import BreadCrumb from "../Components/BreadCrumb";
 import Product from "../Components/Product/Product";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useProductContext } from "../Context/ProductContext";
 
 const NeoSink = () => {
-  const [error, setError] = useState(null);
-  const [sink, setSink] = useState([]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:1337/api/Sinks?populate=*")
-      .then(({ data }) => setSink(data.data))
-      .catch((error) => setError(error));
-  }, []);
+  const {sink} = useProductContext();
+  console.log(sink);
   
-  console.log(sink)
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  if (error) {
-    // Print errors if any
-    return <div>An error occured: {error.message}</div>;
-  }
 
   return (
     <>
