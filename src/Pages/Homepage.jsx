@@ -5,10 +5,10 @@ import Product from "../Components/Product/Product"
 import HeroNewSlider from '../Components/HeroNewSlider'
 import HeroSlider from '../Components/HeroSlider'
 import CreateEmotion from "../Components/CreateEmotion"
-import HomeVideo from "../Components/HomeVideo"
-import OurTeam from "../Components/OurTeam/OurTeam"
-import Footer from "../Components/Footer"
-import Navbar from '../Components/Navbar/Navbar'
+// import HomeVideo from "../Components/HomeVideo"
+// import OurTeam from "../Components/OurTeam/OurTeam"
+// import Footer from "../Components/Footer"
+// import Navbar from '../Components/Navbar/Navbar'
 import ProductListing from '../Components/Product/ProductListing'
 const Homepage = () => {
     useEffect(() => {
@@ -27,7 +27,7 @@ const Homepage = () => {
                 <ProductCategorie />
                 {/* <AboutUs /> */}
                 {/* <HomeVideo /> */}
-                <Product LinkTo="/ProductDetails"/>
+                {/* <Product LinkTo="/ProductDetails"/> */}
                 {/* <OurTeam /> */}
                 <ProductListing/>
             </div>

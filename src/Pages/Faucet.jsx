@@ -6,9 +6,9 @@ import Product from "../Components/Product/Product";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const NeoSink = () => {
+const NeoPro = () => {
   const [error, setError] = useState(null);
-  const [sink, setSink] = useState([]);
+  const [faucet, setFaucet] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,12 +16,12 @@ const NeoSink = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:1337/api/Sinks?populate=*")
-      .then(({ data }) => setSink(data.data))
+      .get("http://localhost:1337/api/faucets?populate=*")
+      .then(({ data }) => setFaucet(data.data))
       .catch((error) => setError(error));
   }, []);
-  
-  console.log(sink)
+
+  // console.log(faucet[0].attributes.lug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -35,7 +35,7 @@ const NeoSink = () => {
   return (
     <>
       {/* <Nav /> */}
-      <BreadCrumb heading="Kitchen Sink" />
+      <BreadCrumb heading="Kitchen Fauctes" />
       <section
         className="module"
         id="alt-features"
@@ -52,44 +52,40 @@ const NeoSink = () => {
                   To Make Your Home More Smiling
                 </div>
 
-                {sink.map((item, id) => {
-                  return (
-                    <div key={id} className="h-100" >
-                      <div className="col-sm-6 col-md-3 col-lg-3">
-                        <div className="shop-item">
-                          <div className="shop-item-image" style={{height: "330px" , width: "100%", objectFit:"cover"}}>
-                            <img
-                            className=""
-                              src={ process.env.REACT_APP_ASSETS_URL + item.attributes.Thumbnail_Image.data.attributes.url}
-                              alt="Accessories Pack"
-                            />
-                            <div className="shop-item-detail">
-                            
-                              <Link to={`/Sink/${item.attributes.Slug}`} className="btn btn-round btn-b">
+                {faucet.map((item,id)=>{
+                    return(
+                        
+                  <div className="col-sm-6 col-md-3 col-lg-3">
+                    <div className="shop-item">
+                      <div className="shop-item-image" style={{height: "330px" , width: "100%", objectFit:"cover"}}>
+                        <img
+                          src={process.env.REACT_APP_ASSETS_URL + item.attributes.Thubnail_Image.data.attributes.url}
+                          alt="Accessories Pack"
+                        />
+                        <div className="shop-item-detail">
+                        <Link to={`/Faucet/${item.attributes.Slug}`} className="btn btn-round btn-b">
                                 <span className="icon-basket">
                                   View Product
                                 </span>
                               </Link>
-                            </div>
-                            <div className="">
-                            <h4 class="shop-item-title font-alt"><a href="#">{item.attributes.Title}</a></h4>${item.attributes.Price}
-                            </div>
-                          </div>
                         </div>
+                        <h4 class="shop-item-title font-alt"><a href="#">{item.attributes.Title}</a></h4>${item.attributes.Price}
                       </div>
                     </div>
-                  );
+                  </div>
+            
+                    )
                 })}
+            
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/*  <Product LinkTo="/ProductDetails"/> */}
       {/* <Footer /> */}
     </>
   );
 };
 
-export default NeoSink;
+export default NeoPro;

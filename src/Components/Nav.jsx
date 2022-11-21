@@ -160,7 +160,7 @@ const Nav = () => {
                             </Link>
                             <ul className="dropdown-menu">
                                 <li className="dropdown">
-                                    <Link to="/Fauctes" className="dropdown-toggle" data-toggle="dropdown">
+                                    <Link to="/Faucet" className="dropdown-toggle" data-toggle="dropdown">
                                         Kitchen Faucets
                                     </Link>
                                     {/* <ul className="dropdown-menu">

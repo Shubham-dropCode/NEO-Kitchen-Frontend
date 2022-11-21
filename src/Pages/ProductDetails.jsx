@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import BreadCrumb from "../Components/BreadCrumb";
 // import Footer from "../Components/Footer";
 // import Nav from "../Components/Nav";
@@ -7,126 +7,56 @@ import BreadCrumb from "../Components/BreadCrumb";
 // import Slider from "slick-carousel";
 import "jquery-ui-dist/jquery-ui";
 import ProductSlider from "../Components/Product/ProductSlider";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 
 const ProductDetails = () => {
+  const {Slug} = useParams()
+  const [error, setError] = useState(null);
+  const [Product, setProduct] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:1337/api/Sinks?populate=*")
+      .then(({ data }) => setProduct(data.data))
+      .catch((error) => setError(error));
+     
+  }, []);
+
+  // console.log(Product);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  if (error) {
+    // Print errors if any
+    return <div>An error occured: {error.message}</div>;
+  }
+  // const location = useParams();
+  // const [mainData, setMainData] = useState(null);
+  
+  
   // useEffect(() => {
-  //   var module = $('.home-section, .module, .module-small, .side-image');
-  //       module.each(function(i) {
-  //           if ($(this).attr('data-background')) {
-  //               $(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');
-  //           }
-  //       });
-  // }, [])
+  //   const data = location.type;
+  //   console.log(location);
+  //   for (const key in products) {
+  //     if (key === data) {
+  //       console.log(`${key}: ${products[key]}`);
+  //       setMainData(products[key]);
+  //     }
+  //   }
+  // }, []);
 
   return (
     <>
-      {/* <Nav /> */}
       <BreadCrumb heading="ProductDetails" />
       <section className="module">
         <div className="container">
-          <h1>Heading</h1>
+          <h1>Product Name</h1>
           <div className="row">
             <div className="col-sm-8 mb-sm-40">
-              <ProductSlider/>
-              {/* <div className="hero-slider" style={{ height: "50vh" }}>
-                <ul className="slides" style={{ height: "50vh" }}>
-                  <li
-                    className="bg-dark-30 bg-dark"
-                    style={{
-                      backgroundImage: `url('${bg1}')`,
-                    }}
-                  >
-                    <div className="titan-caption">
-                      <div className="caption-content">
-                        <div className="font-alt mb-30 titan-title-size-1">
-                          Hello &amp; welcome
-                        </div>
-                        <div className="font-alt mb-40 titan-title-size-4">
-                          We are Titan
-                        </div>
-                        <a
-                          className="section-scroll btn btn-border-w btn-round"
-                          href="#about"
-                        >
-                          Learn More
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li
-                    className="bg-dark-30 bg-dark"
-                    style={{
-                      backgroundImage: `url('${bg2}')`,
-                    }}
-                  >
-                    <div className="titan-caption">
-                      <div className="caption-content">
-                        <div className="font-alt mb-30 titan-title-size-2">
-                          Titan is creative multipurpose html template for
-                          <br />
-                          web developers who change the world
-                        </div>
-                        <a className="btn btn-border-w btn-round" href="about">
-                          Learn More
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    className="bg-dark-30 bg-dark"
-                    style={{
-                      backgroundImage: `url('${bg3}')`,
-                    }}
-                  >
-                    <div className="titan-caption">
-                      <div className="caption-content">
-                        <div className="font-alt mb-30 titan-title-size-1">
-                          We build brands that build business
-                        </div>
-                        <div className="font-alt mb-40 titan-title-size-3">
-                          We are Amazing
-                        </div>
-                        <a
-                          className="section-scroll btn btn-border-w btn-round"
-                          href="#about"
-                        >
-                          Learn More
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div> */}
-
-              {/* <ul className="product-gallery">
-            <li>
-              <a className="gallery" href="assets/images/shop/product-8.jpg" />
-              <img
-                src="assets/images/shop/product-8.jpg"
-                alt="Single Product"
-              />
-            </li>
-            <li>
-              <a className="gallery" href="assets/images/shop/product-9.jpg" />
-              <img
-                src="assets/images/shop/product-9.jpg"
-                alt="Single Product"
-              />
-            </li>
-            <li>
-              <a className="gallery" href="assets/images/shop/product-10.jpg" />
-              <img
-                src="assets/images/shop/product-10.jpg"
-                alt="Single Product"
-              />
-            </li>
-          </ul> */}
-         </div>
+              <ProductSlider />
+            </div>
             <div className="col-sm-4">
               <div
                 className=""
@@ -137,18 +67,22 @@ const ProductDetails = () => {
                 }}
               >
                 <div className="col-sm-4 text-center">
-                  <h3>Thickness</h3>
+                  <h3>Freatures</h3>
                   <p>15 MM</p>
                 </div>
                 <div className="col-sm-4 text-center">
                   <h3>Finishes</h3>
                   <p>Gloss & Matt Finish</p>
                 </div>
+           
                 <div className="col-sm-4 text-center">
-                  <h3>Sizes (CM)</h3>
-                  <p>800 x3000 MM 800 x3200 MM</p>
+                   <h3>Sizes (CM)</h3>
+                   <p>800 x3000 MM 800 x3200 MM</p>
+               
                 </div>
+              <Link to="/Category">  <button  className="btn btn-border-d btn-round mt-50">Add To Cart</button></Link>
               </div>
+
             </div>
           </div>
         </div>
